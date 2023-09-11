@@ -80,10 +80,10 @@ public class Student {
             days = hours / 24;
             hours = hours % 24;
             hasFinished += days > 0 ? days + " d " : "";
-            hasFinished += hours + " hours are left until the end.";
+            hasFinished += hours + " hours left until the end.";
 
         } else {
-            hasFinished = "Training completed. ";
+            hasFinished = "Training is completed. ";
             hours = finishDate.until(timeOfChecking, ChronoUnit.HOURS);
             days = hours / 24;
             hours = hours % 24;

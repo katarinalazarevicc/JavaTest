@@ -47,7 +47,7 @@ public class CalculatingTest {
     @Test
     public void checkingUnfinishedDateMessage() {
 
-        String expectedMessage = "Training is not finished. 11 d 21 hours are left until the end.";
+        String expectedMessage = "Training is not finished. 11 d 21 hours left until the end.";
         String actualMessage = student.hasFinished(LocalDateTime.of(2020, Month.JUNE, 19, 15, 00));
 
         assertEquals("The correct message is not displayed when checking unfinished date", expectedMessage, actualMessage);
@@ -56,7 +56,7 @@ public class CalculatingTest {
     @Test
     public void checkingFinishedDateMessage() {
 
-        String expectedMessage = "Training completed. 3 hours have passed since the end.";
+        String expectedMessage = "Training is completed. 3 hours have passed since the end.";
         String actualMessage = student.hasFinished(LocalDateTime.of(2020, Month.JULY, 1, 15, 00));
 
         assertEquals("The correct message is not displayed when checking unfinished date", expectedMessage, actualMessage);
